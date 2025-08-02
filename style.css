@@ -1,0 +1,107 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Gradient Backgrounds */
+.gradient-bg {
+    background: linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #420fc1 100%);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #6d28d9 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Links */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #8b5cf6;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.2),
+                0 10px 10px -5px rgba(139, 92, 246, 0.1);
+}
+
+/* Hero Pattern Background */
+.hero-pattern {
+    background-image: url('img/latar.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#logo-udinus-container {
+    width: 80px; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: 80px; /* Harus sama dengan width untuk menjadi lingkaran sempurna */
+    background-color: white;
+    border-radius: 50%;
+    padding: 8px; /* Berikan sedikit ruang di dalam lingkaran */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan seperti logo lain */
+    margin-right: 1rem; /* Tambahkan sedikit jarak ke elemen berikutnya (navigasi) */
+}
+
+#logo-udinus-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Pastikan seluruh logo terlihat di dalam lingkaran */
+}
+
+header nav {
+    margin-left: auto; /* Dorong navigasi ke kanan */
+}
+
+header nav a {
+    margin-left: 0.5rem; /* Atur jarak antar link navigasi */
+    margin-right: 0.5rem;
+}
+
+header .container > div {
+    display: flex;
+    align-items: center;
+}
+
+header .container > div > nav {
+    margin-left: 1rem; /* Atur jarak antara logo dan navigasi */
+}
+@media (max-width: 768px) {
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+button, a.button {
+    transition: all 0.3s ease-in-out;
+}
+
+#galeri img {
+    object-fit: cover;
+    height: 100%;
+}
